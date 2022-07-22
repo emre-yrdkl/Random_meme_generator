@@ -33,8 +33,7 @@ function App() {
 
 
   console.log(memeArray[0]?.url)//soru işareti olmazsa url'ye erişemiyoruz hata veriyor
-  console.log(text.bottomText)
-
+  
   const randomMeme = () =>{ //create random num
 
     setrandomNum(Math.floor(Math.random() * (100)))
@@ -53,7 +52,7 @@ function App() {
   return (
     <main >
       <div className='head-div'>
-        <img className='meme-icon' src={logo} />
+        <img className='meme-icon' src={logo} alt="logo"/>
         <h1>RANDOM MEME GENERATOR</h1>
       </div>
 
@@ -66,7 +65,7 @@ function App() {
 
 
       <div className="img-div">
-        <img src={memeArray[randomNum]?.url} className="img-div"/>
+        <img src={memeArray[randomNum]?.url} className="img-div" alt="meme"/>
 
         <Draggable style={{position: 'absolute'}} >
           <div className='paragraph' style={{
